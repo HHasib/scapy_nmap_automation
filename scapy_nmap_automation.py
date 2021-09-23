@@ -17,10 +17,8 @@ def scheduled_job():
 	sched.add_job(nmap_command, 'interval', seconds = time_interval_in_sec)
 	sched2.add_job(scapy_command, 'interval', seconds = time_interval_in_sec)
 	sched.start()
-	
 	time.sleep(total_program_time)
 	sched.shutdown()
-
 	sched2.start()
 	time.sleep(total_program_time)
 	sched2.shutdown()
@@ -44,9 +42,8 @@ def scapy_command():
 	time_passed()
 	print()
 
-# 	
-# scapy_testing()
-# nmap_test()
+
+#the main function
 if __name__ == "__main__":
 	print("Program started...")
 	print()
